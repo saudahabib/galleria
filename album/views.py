@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def welcome(request):
-    return HttpResponse('Welcome to album')
-    
+    return render(request, 'welcome.html')
+
 def sports_category(request):
     return HttpResponse('This is the sports category')
