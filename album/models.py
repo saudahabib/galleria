@@ -49,6 +49,9 @@ class Image(models.Model):
         all_images=cls.objects.filter(category__category__icontains=search_term)
         return all_images
 
+    def get_image_by_id(self):
+        photo = Image.objects.get(id=image_id)
+        return photo
 
     def __str__(self):
         return self.image_name
