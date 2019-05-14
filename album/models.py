@@ -43,6 +43,13 @@ class Image(models.Model):
         all_images=cls.objects.all()
         return all_images
 
+    '''function to filter by category'''
+    @classmethod
+    def search_by_cat(cls, search_term):
+        all_images=cls.objects.filter(category__category__icontains=search_term)
+        return all_images
+
+
     def __str__(self):
         return self.image_name
     class Meta:
