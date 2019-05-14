@@ -1,19 +1,32 @@
+{% load bootstrap4 %}
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
 
   {% if title %}
-  <title>Galleria- {{title}}</title>
+  <title>Galleria - {{title}}</title>
   {% else %}
-    <title> Galleria </title>
+    <title> Galleria</title>
   {% endif %}
+
+  {% block styles %}
+  <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu" rel="stylesheet">
+    {% bootstrap_css %}
+  {% endblock %}
 
 </head>
 <body>
     {% block content %}
-  <h1>Galleria</h1>
-  <h3>Pictures worth a thousand words</h3>
+    <div class="head bg-warning">
+      <h1 class='text-center '>Galleria</h1>
+      <h3>Pictures worth a thousand words!</h3>
+    </div>
      {%endblock%}
+
+    {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     {% bootstrap_javascript %}
+    {% endblock %}
 </body>
 </html>
