@@ -9,7 +9,7 @@ class Category(models.Model):
 
 
     def __str__(self):
-        return self.name
+        return self.category
 
 class Location(models.Model):
     location=models.CharField(max_length=30)
@@ -18,7 +18,7 @@ class Location(models.Model):
 
 
     def __str__(self):
-        return self.image_name
+        return self.location
 
 
 class Image(models.Model):
@@ -38,8 +38,9 @@ class Image(models.Model):
         to_delete.delete()
 
     '''function to display'''
-    def display_images(self):
-        all_images=Image.objects.all()
+    @classmethod
+    def display_images(cls):
+        all_images=cls.objects.all()
         return all_images
 
     def __str__(self):

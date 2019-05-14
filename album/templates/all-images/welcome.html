@@ -1,0 +1,32 @@
+{%extends 'all-images/base.html'%}
+
+{{block.super}}
+
+{%block content%}
+<div class="head bg-warning">
+  <h1 class='text-center '>Galleria</h1>
+  <h3>Pictures worth a thousand words!</h3>
+</div>
+
+  <div class="container-fluid">
+    <!-- loop through images in database -->
+    <div class="row_image">
+    {% for image in images %}
+
+
+      <div class="column_image all_images">
+        <img width="100%" src="{{image.image.url}}" alt="images" >
+      </div>
+
+
+  {%empty%}
+  <div class="row">
+    <div class="col-md-12 nuttnhere">
+      <h1>Nothing here yet! Give us a while...</h1>
+    </div>
+
+  </div>
+  {%  endfor %}
+  </div>
+  </div>
+  {%endblock%}

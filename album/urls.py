@@ -4,7 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns=[
-    url('^$',views.welcome,name = 'welcome'),
+    url('^$',views.home,name = 'home'),
     url('^sports/$',views.sports_category,name = 'sports'),
 
 ]

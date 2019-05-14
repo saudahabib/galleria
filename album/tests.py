@@ -4,11 +4,20 @@ from .models import Image, Location, Category
 
 class ImageTestClass(TestCase):
     def setUp(self):
+        '''Creating a new location and saving it'''
         self.loc1=Location(location="Mombasa")
         self.loc1.save_location()
+        '''Creating a new category and saving it'''
         self.cat1=Category(category="food")
         self.cat1.save_category()
+        '''Creating a new image and saving it'''
         self.img1=Image(image_name="scenery",image_description="an image test",location=self.loc1,category=self.cat1)
+        self.img1.save()
+
+    def tearDown(self):
+        Image.objects.all().delete()
+        Category.objects.all().delete()
+        Location.objects.all().delete()
 
     def test_instance(self):
         self.assertTrue(isinstance(self.img1,Image))
@@ -31,8 +40,8 @@ class ImageTestClass(TestCase):
 
     '''test to display images'''
     def test_display_images(self):
-        all_images=Image.display_images(self)
-        self.assertEqual(len(all_images),0)
+        all_images=Image.display_images()
+        self.assertTrue(len(all_images)>0)
 
 class LocationTestClass(TestCase):
     def setUp(self):
