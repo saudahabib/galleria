@@ -11,16 +11,16 @@
 
   </div>
 
-  <div class="row">
+  <div class=" row row_image">
 
 
     {% for article in images %}
-      <div class="row">
+      
         <div class="col-sm-6 col-md-3 column_image all_images">
           <p>{{image.image_name}}</p>
             <img style="width:100%" src="{{article.image.url}}" alt="images">
         </div>
-      </div>
+
     {% endfor %}
 
   </div>

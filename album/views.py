@@ -20,3 +20,10 @@ def search_results(request):
     else:
         message="Type in a category to search"
         return render(request, 'all-images/search.html',{"message":message})
+
+def single_photo(request, image_id):
+    try:
+        photo = Image.objects.get(id=image_id)
+    except:
+        raise Http404()
+    return render(request, "all-images/photo.html", {"photo":photo})
