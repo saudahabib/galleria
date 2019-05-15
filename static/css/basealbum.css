@@ -75,3 +75,7 @@ body{
   margin: 20%;
   border: 12%;
 }
+
+nav a{
+  color: yellow;
+}
