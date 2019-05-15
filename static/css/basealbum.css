@@ -48,14 +48,10 @@ body{
     max-width: 50%;
   }
 
-  .galleria{
-    color: yellow;
-    font-weight: lighter;
 
-  }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
   .column_image{
     flex: 100%;
     max-width: 100%;
@@ -63,24 +59,19 @@ body{
   }
 }
 
+/* media query for text */
+@media screen and (max-width: 900px){
+
+
+  .galleria{
+    color: yellow;
+    font-weight: lighter;
+    font-size: 70px;
+
+  }
+
+
 .modal-content{
   margin: 20%;
   border: 12%;
-}
-
-.head{
-  background-image: url('https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  font-size: 3.9em;
-
-}
-
-.head p{
-  background-color: rgba(0,0,0,0.5)
-}
-.galleria{
-  font-size: 4.1em;
-  background-color: rgba(0,0,0,0.5);
 }
