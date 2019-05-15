@@ -37,10 +37,8 @@ body{
     max-width: 100%;
   }
 }
-.details{
-  float: right;
-}
 
 .modal-content{
-  padding: 20%;
+  margin: 20%;
+  border: 12%;
 }
