@@ -24,10 +24,34 @@ body{
   vertical-align: middle;
 }
 
+.head{
+  background-image: url('https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-size: 3.9em;
+
+}
+
+.head p{
+  background-color: rgba(0,0,0,0.5)
+}
+.galleria{
+  font-size: 4.1em;
+  background-color: rgba(0,0,0,0.5);
+}
+
+
 @media screen and (max-width: 800px){
   .column_image{
     flex: 50%;
     max-width: 50%;
+  }
+
+  .galleria{
+    color: yellow;
+    font-weight: lighter;
+
   }
 }
 
@@ -35,6 +59,7 @@ body{
   .column_image{
     flex: 100%;
     max-width: 100%;
+
   }
 }
 
@@ -57,5 +82,5 @@ body{
 }
 .galleria{
   font-size: 4.1em;
-  background-color: rgba(0,0,0,0.5)
+  background-color: rgba(0,0,0,0.5);
 }
