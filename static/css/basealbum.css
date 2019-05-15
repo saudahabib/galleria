@@ -3,9 +3,9 @@ body{
   font-family:'Ubuntu', cursive;
 }
 
-*{
+/* *{
   box-sizing: border-box;
-}
+} */
 
 .row_image{
   display: flex;
@@ -39,4 +39,8 @@ body{
 }
 .details{
   float: right;
+}
+
+.modal-content{
+  padding: 20%;
 }
